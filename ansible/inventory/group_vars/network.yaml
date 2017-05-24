@@ -3,7 +3,7 @@ stack_prefix: default
 ec2_vpc:
   stack_name: aem-vpc-stack
   tag_name: AEM Stack VPC
-  cidr_block: 10.0.8.0/21
+  cidr_block: 10.1.0.0/16
 
 network:
   stack_name: aem-network-stack
@@ -13,51 +13,69 @@ network:
 
   publish_dispatcher_elb:
     subnet_a:
-      cidr_block: 10.0.10.0/25
+      cidr_block: 10.1.1.0/25
       tag_name: AEM Publish Dispatcher ELB Subnet A
     subnet_b:
-      cidr_block: 10.0.10.128/25
+      cidr_block: 10.1.1.128/25
       tag_name: AEM Publish Dispatcher ELB Subnet B
+    subnet_c:
+      cidr_block: 10.1.2.0/25
+      tag_name: AEM Publish Dispatcher ELB Subnet C
 
   publish_dispatcher:
     subnet_a:
-      cidr_block: 10.0.11.0/25
+      cidr_block: 10.1.2.128/25
       tag_name: AEM Publish Dispatcher Subnet A
     subnet_b:
-      cidr_block: 10.0.11.128/25
+      cidr_block: 10.1.3.0/25
       tag_name: AEM Publish Dispatcher Subnet B
+    subnet_c:
+      cidr_block: 10.1.3.128/25
+      tag_name: AEM Publish Dispatcher Subnet C
 
   publish:
     subnet_a:
-      cidr_block: 10.0.12.0/25
+      cidr_block: 10.1.4.0/25
       tag_name: AEM Publish Subnet A
     subnet_b:
-      cidr_block: 10.0.12.128/25
+      cidr_block: 10.1.4.128/25
       tag_name: AEM Publish Subnet B
+    subnet_c:
+      cidr_block: 10.1.5.0/25
+      tag_name: AEM Publish Subnet C
 
   author:
     subnet_a:
-      cidr_block: 10.0.13.0/25
+      cidr_block: 10.1.5.128/25
       tag_name: AEM Author Subnet A
     subnet_b:
-      cidr_block: 10.0.13.128/25
+      cidr_block: 10.1.6.0/25
       tag_name: AEM Auhtor Subnet B
+    subnet_c:
+      cidr_block: 10.1.6.128/25
+      tag_name: AEM Auhtor Subnet C
 
   author_dispatcher:
     subnet_a:
-      cidr_block: 10.0.14.0/25
+      cidr_block: 10.1.7.0/25
       tag_name: AEM Author Dispatcher Subnet A
     subnet_b:
-      cidr_block: 10.0.14.128/25
+      cidr_block: 10.1.7.128/25
       tag_name: AEM Author Dispatcher Subnet B
+    subnet_c:
+      cidr_block: 10.1.8.0/25
+      tag_name: AEM Author Dispatcher Subnet C
 
   tool:
     subnet_a:
-      cidr_block: 10.0.15.0/25
+      cidr_block: 10.1.8.128/25
       tag_name: AEM Tool Subnet A
     subnet_b:
-      cidr_block: 10.0.15.128/25
+      cidr_block: 10.1.9.0/25
       tag_name: AEM Tool Subnet B
+    subnet_c:
+      cidr_block: 10.1.9.128/25
+      tag_name: AEM Tool Subnet C
 
   public_route_table:
     tag_name: AEM VPC Public Route Table

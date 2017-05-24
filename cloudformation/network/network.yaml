@@ -12,13 +12,18 @@ Parameters:
 
   AvailabilityZoneAParameter:
     Type: AWS::EC2::AvailabilityZone::Name
-    Default: ap-southeast-2a
+    Default: eu-west-1a
     Description: Availability Zone A
 
   AvailabilityZoneBParameter:
     Type: AWS::EC2::AvailabilityZone::Name
-    Default: ap-southeast-2b
+    Default: eu-west-1b
     Description: Availability Zone B
+
+  AvailabilityZoneCParameter:
+    Type: AWS::EC2::AvailabilityZone::Name
+    Default: eu-west-1c
+    Description: Availability Zone C
 
   Ec2InternetGatewayTagNameParameter:
     Type: String
@@ -27,7 +32,7 @@ Parameters:
 
   PublishDispatcherELBSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.10.0/25
+    Default: 10.1.1.0/25
     Description: AEM Publish Dispatcher ELB Subnet A Cidr Block
 
   PublishDispatcherELBSubnetATagNameParameter:
@@ -37,7 +42,7 @@ Parameters:
 
   PublishDispatcherELBSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.10.128/25
+    Default: 10.1.1.128/25
     Description: AEM Publish Dispatcher ELB Subnet B Cidr Block
 
   PublishDispatcherELBSubnetBTagNameParameter:
@@ -45,10 +50,19 @@ Parameters:
     Default: AEM Publish Dispatcher ELB Subnet B
     Description: AEM Publish Dispatcher ELB Subnet B Name
 
+  PublishDispatcherELBSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.2.0/25
+    Description: AEM Publish Dispatcher ELB Subnet C Cidr Block
+
+  PublishDispatcherELBSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Publish Dispatcher ELB Subnet C
+    Description: AEM Publish Dispatcher ELB Subnet C Name
 
   PublishDispatcherSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.11.0/25
+    Default: 10.1.2.128/25
     Description: AEM Publish Dispatcher Subnet A Cidr Block
 
   PublishDispatcherSubnetATagNameParameter:
@@ -58,7 +72,7 @@ Parameters:
 
   PublishDispatcherSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.11.128/25
+    Default: 10.1.3.0/25
     Description: AEM Publish Dispatcher Subnet B Cidr Block
 
   PublishDispatcherSubnetBTagNameParameter:
@@ -66,10 +80,19 @@ Parameters:
     Default: AEM Publish Dispatcher Subnet B
     Description: AEM Publish Dispatcher Subnet B Name
 
+  PublishDispatcherSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.3.128/25
+    Description: AEM Publish Dispatcher Subnet C Cidr Block
+
+  PublishDispatcherSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Publish Dispatcher Subnet C
+    Description: AEM Publish Dispatcher Subnet C Name
 
   PublishSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.12.0/25
+    Default: 10.1.4.0/25
     Description: AEM Publish Subnet A Cidr Block
 
   PublishSubnetATagNameParameter:
@@ -79,7 +102,7 @@ Parameters:
 
   PublishSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.12.128/25
+    Default: 10.1.4.128/25
     Description: AEM Publish Subnet B Cidr Block
 
   PublishSubnetBTagNameParameter:
@@ -87,10 +110,19 @@ Parameters:
     Default: AEM Publish Subnet B
     Description: AEM Publish Subnet B Name
 
+  PublishSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.5.0/25
+    Description: AEM Publish Subnet C Cidr Block
+
+  PublishSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Publish Subnet C
+    Description: AEM Publish Subnet C Name
 
   AuthorSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.13.0/25
+    Default: 10.1.5.128/25
     Description: AEM Author Subnet A Cidr Block
 
   AuthorSubnetATagNameParameter:
@@ -100,7 +132,7 @@ Parameters:
 
   AuthorSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.13.128/25
+    Default: 10.1.6.0/25
     Description: AEM Author Subnet B Cidr Block
 
   AuthorSubnetBTagNameParameter:
@@ -108,10 +140,19 @@ Parameters:
     Default: AEM Auhtor Subnet B
     Description: AEM Author Subnet B Name
 
+  AuthorSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.6.128/25
+    Description: AEM Author Subnet C Cidr Block
+
+  AuthorSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Auhtor Subnet C
+    Description: AEM Author Subnet C Name
 
   AuthorDispatcherSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.14.0/25
+    Default: 10.1.7.0/25
     Description: AEM Author Dispatcher Subnet A Cidr Block
 
   AuthorDispatcherSubnetATagNameParameter:
@@ -121,7 +162,7 @@ Parameters:
 
   AuthorDispatcherSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.14.128/25
+    Default: 10.1.7.128/25
     Description: AEM Author Dispatcher Subnet B Cidr Block
 
   AuthorDispatcherSubnetBTagNameParameter:
@@ -129,10 +170,20 @@ Parameters:
     Default: AEM Author Dispatcher Subnet B
     Description: AEM Author Dispatcher Subnet B Name
 
+  AuthorDispatcherSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.8.0/25
+    Description: AEM Author Dispatcher Subnet C Cidr Block
+
+  AuthorDispatcherSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Author Dispatcher Subnet C
+    Description: AEM Author Dispatcher Subnet C Name
+
 
   ToolSubnetACidrBlockParameter:
     Type: String
-    Default: 10.0.15.0/25
+    Default: 10.1.8.128/25
     Description: Tool Subnet A Cidr Block
 
   ToolSubnetATagNameParameter:
@@ -142,7 +193,7 @@ Parameters:
 
   ToolSubnetBCidrBlockParameter:
     Type: String
-    Default: 10.0.15.128/25
+    Default: 10.1.9.0/25
     Description: Tool Subnet B Cidr Block
 
   ToolSubnetBTagNameParameter:
@@ -150,6 +201,15 @@ Parameters:
     Default: AEM Tool Subnet B
     Description: AEM Tool Subnet B Name
 
+  ToolSubnetCCidrBlockParameter:
+    Type: String
+    Default: 10.1.9.128/25
+    Description: Tool Subnet C Cidr Block
+
+  ToolSubnetCTagNameParameter:
+    Type: String
+    Default: AEM Tool Subnet C
+    Description: AEM Tool Subnet C Name
 
   PublicRouteTableTagNameParameter:
     Type: String
@@ -212,6 +272,21 @@ Resources:
       VpcId:
         Ref: VpcIdParameter
 
+  PublishDispatcherELBSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: PublishDispatcherELBSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: PublishDispatcherELBSubnetCTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
   PublishDispatcherSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
@@ -239,6 +314,22 @@ Resources:
         - Key: Name
           Value:
             Ref: PublishDispatcherSubnetBTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
+
+  PublishDispatcherSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: PublishDispatcherSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: PublishDispatcherSubnetCTagNameParameter
       VpcId:
         Ref: VpcIdParameter
 
@@ -272,6 +363,21 @@ Resources:
       VpcId:
         Ref: VpcIdParameter
 
+  PublishSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: PublishSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: PublishSubnetCTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
   AuthorSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
@@ -301,6 +407,22 @@ Resources:
             Ref: AuthorSubnetBTagNameParameter
       VpcId:
         Ref: VpcIdParameter
+
+  AuthorSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: AuthorSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: AuthorSubnetCTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
 
   AuthorDispatcherSubnetA:
     Type: AWS::EC2::Subnet
@@ -332,6 +454,23 @@ Resources:
       VpcId:
         Ref: VpcIdParameter
 
+
+  AuthorDispatcherSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: AuthorDispatcherSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: AuthorDispatcherSubnetCTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
+
   ToolSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
@@ -359,6 +498,22 @@ Resources:
         - Key: Name
           Value:
             Ref: ToolSubnetBTagNameParameter
+      VpcId:
+        Ref: VpcIdParameter
+
+
+  ToolSubnetC:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone:
+        Ref: AvailabilityZoneCParameter
+      CidrBlock:
+        Ref: ToolSubnetCCidrBlockParameter
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value:
+            Ref: ToolSubnetCTagNameParameter
       VpcId:
         Ref: VpcIdParameter
 
@@ -410,6 +565,15 @@ Resources:
       SubnetId:
         Ref: PublishDispatcherELBSubnetB
 
+
+  PublishDispatcherELBSubnetCPublicRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PublicRouteTable
+      SubnetId:
+        Ref: PublishDispatcherELBSubnetC
+
   PublishDispatcherSubnetAPrivateRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
@@ -425,6 +589,14 @@ Resources:
         Ref: PrivateRouteTable
       SubnetId:
         Ref: PublishDispatcherSubnetB
+
+  PublishDispatcherSubnetCPrivateRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PublishDispatcherSubnetC
 
   PublishSubnetAPrivatecRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -442,6 +614,14 @@ Resources:
       SubnetId:
         Ref: PublishSubnetB
 
+  PublishSubnetCPrivateRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PublishSubnetC
+
   AuthorSubnetAPrivatecRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
@@ -457,6 +637,14 @@ Resources:
         Ref: PrivateRouteTable
       SubnetId:
         Ref: AuthorSubnetB
+
+  AuthorSubnetCPrivateRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: AuthorSubnetC
 
   AuthorDispatcherSubnetAPrivatecRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -474,6 +662,14 @@ Resources:
       SubnetId:
         Ref: AuthorDispatcherSubnetB
 
+  AuthorDispatcherSubnetCPrivateRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: AuthorDispatcherSubnetC
+
   ToolSubnetAPrivatecRouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
@@ -490,6 +686,14 @@ Resources:
       SubnetId:
         Ref: ToolSubnetB
 
+  ToolSubnetCPrivateRouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: ToolSubnetC
+
 
 Outputs:
 
@@ -503,6 +707,11 @@ Outputs:
       Ref: PublishDispatcherELBSubnetB
     Description: The Publish Dispatcher ELB Subnet in Availability Zone B
 
+  PublishDispatcherELBSubnetC:
+    Value:
+      Ref: PublishDispatcherELBSubnetC
+    Description: The Publish Dispatcher ELB Subnet in Availability Zone C
+
   PublishDispatcherSubnetA:
     Value:
       Ref: PublishDispatcherSubnetA
@@ -512,6 +721,11 @@ Outputs:
     Value:
       Ref: PublishDispatcherSubnetB
     Description: The Publish Dispatcher Subnet in Availability Zone B
+
+  PublishDispatcherSubnetC:
+    Value:
+      Ref: PublishDispatcherSubnetC
+    Description: The Publish Dispatcher Subnet in Availability Zone C
 
   PublishSubnetA:
     Value:
@@ -523,6 +737,11 @@ Outputs:
       Ref: PublishSubnetB
     Description: The Publish Subnet in Availability Zone B
 
+  PublishSubnetC:
+    Value:
+      Ref: PublishSubnetC
+    Description: The Publish Subnet in Availability Zone C
+
   AuthorSubnetA:
     Value:
       Ref: AuthorSubnetA
@@ -532,6 +751,12 @@ Outputs:
     Value:
       Ref: AuthorSubnetB
     Description: The Author Subnet in Availability Zone B
+
+  AuthorSubnetC:
+    Value:
+      Ref: AuthorSubnetC
+    Description: The Author Subnet in Availability Zone C
+
 
   AuthorDispatcherSubnetA:
     Value:
@@ -543,6 +768,11 @@ Outputs:
       Ref: AuthorDispatcherSubnetB
     Description: The Author Dispatcher Subnet in Availability Zone B
 
+  AuthorDispatcherSubnetC:
+    Value:
+      Ref: AuthorDispatcherSubnetC
+    Description: The Author Dispatcher Subnet in Availability Zone C
+
   ToolSubnetA:
     Value:
       Ref: ToolSubnetA
@@ -552,6 +782,11 @@ Outputs:
     Value:
       Ref: ToolSubnetB
     Description: The Tool Subnet in Availability Zone B
+
+  ToolSubnetC:
+    Value:
+      Ref: ToolSubnetC
+    Description: The Tool Subnet in Availability Zone C
 
   PublicRouteTable:
     Value:

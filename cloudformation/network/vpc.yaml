@@ -7,7 +7,7 @@ Description:
 Parameters:
   Ec2VpcCidrBlockParameter:
     Type: String
-    Default: 10.0.8.0/21
+    Default: 10.1.0.0/16
     Description: The CidrBlock for the VPC
   Ec2VpcTagNameParameter:
     Type: String
